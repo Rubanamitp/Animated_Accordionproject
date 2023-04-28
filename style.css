@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(236, 198, 204);
+    font-family: 'Oswald', sans-serif;
+}
+.container{
+    width: 50%;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.item{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    padding: 20px;
+    gap:30px;
+    box-shadow: 0 0 26px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    border-radius: 19px;
+}
+#h1{
+    text-align: center;
+    margin: 350px auto 0 auto;
+    width: 50%;
+}
+.no{
+    font-size: 30px;
+    font-weight: bold;
+}
+.para{
+    font-size: 30px;
+    font-weight: bold;
+}
+.hidden{
+    grid-column: 2/3;
+    display: none;
+}
+.hidden p{
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.6;
+    word-spacing: 4px;
+    letter-spacing: 0.5;
+    margin-bottom: 12px;
+
+}
+.hidden ul li{
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1.6;
+    word-spacing: 4px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+
+}
+.hidden ul{
+    display: flex;
+    flex-direction: column;
+}
+.icon{
+    font-size: 24px;
+    font-weight: bolder;
+}
+.active{
+    position: relative;
+}
+.active::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    border-top:3px solid blue ;
+    animation: borderline 1s linear forwards;
+}
+@keyframes borderline{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+.active .hidden{
+    display: block;
+}
